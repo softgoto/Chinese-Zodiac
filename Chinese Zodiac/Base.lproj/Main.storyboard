@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Chinese_Zodiac" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,99 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哪年出生的" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAA-QH-WT8">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59y-jC-C0C">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="oYP-jE-H4Y">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.65554704799999997" blue="0.75494329839999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" title="点我看看这一年是什么生肖">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchBtn" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cFJ-hZ-OzK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DIh-qW-Puv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tAA-QH-WT8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="75" id="CBR-7e-oJT">
+                                <variation key="widthClass=compact" constant="70"/>
+                            </constraint>
+                            <constraint firstItem="DIh-qW-Puv" firstAttribute="top" secondItem="oYP-jE-H4Y" secondAttribute="bottom" constant="30" id="Ckm-Vh-hqd"/>
+                            <constraint firstAttribute="centerX" secondItem="oYP-jE-H4Y" secondAttribute="centerX" id="FYw-fe-GgJ"/>
+                            <constraint firstItem="tAA-QH-WT8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="52" id="L1p-YS-usU">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="oYP-jE-H4Y" firstAttribute="top" secondItem="59y-jC-C0C" secondAttribute="bottom" constant="40" id="PN7-Dn-mV9"/>
+                            <constraint firstItem="DIh-qW-Puv" firstAttribute="centerX" secondItem="oYP-jE-H4Y" secondAttribute="centerX" id="g2R-9W-XtN"/>
+                            <constraint firstItem="59y-jC-C0C" firstAttribute="top" secondItem="tAA-QH-WT8" secondAttribute="top" constant="-4" id="rZM-NN-F8q"/>
+                            <constraint firstAttribute="trailing" secondItem="59y-jC-C0C" secondAttribute="trailing" constant="50" id="s4x-ik-me0"/>
+                            <constraint firstItem="59y-jC-C0C" firstAttribute="leading" secondItem="tAA-QH-WT8" secondAttribute="trailing" constant="30" id="xBb-0Y-Doa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tAA-QH-WT8"/>
+                                <exclude reference="59y-jC-C0C"/>
+                                <exclude reference="oYP-jE-H4Y"/>
+                                <exclude reference="DIh-qW-Puv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CBR-7e-oJT"/>
+                                <exclude reference="L1p-YS-usU"/>
+                                <exclude reference="FYw-fe-GgJ"/>
+                                <exclude reference="PN7-Dn-mV9"/>
+                                <exclude reference="rZM-NN-F8q"/>
+                                <exclude reference="s4x-ik-me0"/>
+                                <exclude reference="xBb-0Y-Doa"/>
+                                <exclude reference="Ckm-Vh-hqd"/>
+                                <exclude reference="g2R-9W-XtN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tAA-QH-WT8"/>
+                                <include reference="59y-jC-C0C"/>
+                                <include reference="oYP-jE-H4Y"/>
+                                <include reference="DIh-qW-Puv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CBR-7e-oJT"/>
+                                <include reference="L1p-YS-usU"/>
+                                <include reference="FYw-fe-GgJ"/>
+                                <include reference="PN7-Dn-mV9"/>
+                                <include reference="rZM-NN-F8q"/>
+                                <include reference="s4x-ik-me0"/>
+                                <include reference="xBb-0Y-Doa"/>
+                                <include reference="Ckm-Vh-hqd"/>
+                                <include reference="g2R-9W-XtN"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="oYP-jE-H4Y" id="vWq-Te-zs3"/>
+                        <outlet property="img" destination="DIh-qW-Puv" id="kdO-5Q-xnj"/>
+                        <outlet property="input" destination="59y-jC-C0C" id="N2j-lv-rVu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-463.5" y="342"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.png" width="256" height="256"/>
+    </resources>
 </document>
