@@ -30,7 +30,26 @@ class ViewController: UIViewController {
         
         self.getZodiacByYear(year!)
         
+        
+        //TODO:test
+        let now = NSDate()
+        
+        let formatter:NSDateFormatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        var oldDate:NSDate? = formatter.dateFromString("1990-08-04")
+        
+        let gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+
+        let components = gregorian!.components(NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth, fromDate: oldDate!, toDate: now, options: NSCalendarOptions(0))
+        
+        println(components.year)
+        println(components.month)
+        
+        
+        
+        
     }
+    
     
     /**
     点击Button
